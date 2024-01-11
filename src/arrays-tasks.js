@@ -21,9 +21,7 @@
  *    getIntervalArray(3, 3) => [ 3 ]
  */
 function getIntervalArray(start, end) {
-  return Array.from({ length: end - start + 1 }, function (_, x) {
-    return start + x;
-  });
+  return Array.from({ length: end - start + 1 }, (_, x) => start + x);
 }
 
 /**
@@ -41,9 +39,7 @@ function getIntervalArray(start, end) {
  */
 function sumArrays(arr1, arr2) {
   const y = Math.max(arr1.length, arr2.length);
-  return Array.from({ length: y }, function (_, x) {
-    return (arr1[x] || 0) + (arr2[x] || 0);
-  });
+  return Array.from({ length: y }, (_, x) => (arr1[x] || 0) + (arr2[x] || 0));
 }
 
 /**
@@ -93,9 +89,7 @@ function findAllOccurrences(arr, item) {
  *    removeFalsyValues([ false, 0, NaN, '', undefined ]) => [ ]
  */
 function removeFalsyValues(arr) {
-  return arr.filter(function (x) {
-    return x;
-  });
+  return arr.filter((x) => x);
 }
 
 /**
@@ -109,9 +103,7 @@ function removeFalsyValues(arr) {
  *    getStringsLength([ 'angular', 'react', 'ember' ]) => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-  return arr.map(function (x) {
-    return x.length;
-  });
+  return arr.map((x) => x.length);
 }
 
 /**
